@@ -19,9 +19,7 @@ function submitForm(){
     $.ajax({
         type: "POST",
         url: "https://socme.ind-cloud.everdata.com/contact-us",
-        datatype : "application/json",
-        contentType: "text/plain",
-        data: "fname=" + fname + "&lname=" + lname + "&email=" + email + "&message=" + message,
+        data: JSON.stringify("fname=" + fname + "&lname=" + lname + "&email=" + email + "&message=" + message),
         success : function(text){
             if (text == "success"){
                 formSuccess();
