@@ -21,7 +21,7 @@ function submitForm(){
         url: "https://socme.ind-cloud.everdata.com/contact-us",
         datatype : "application/json",
         contentType: "text/plain",
-        data: JSON.parse("fname=" + fname + "&lname=" + lname + "&email=" + email + "&message=" + message),
+        data: "fname=" + fname + "&lname=" + lname + "&email=" + email + "&message=" + message,
         success : function(text){
             if (text == "success"){
                 formSuccess();
